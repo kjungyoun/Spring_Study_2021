@@ -9,6 +9,11 @@ public class GuestBookServiceImpl implements GuestBookService {
 	
 	private GuestBookDao guestBookDao;
 	
+	public GuestBookServiceImpl() {}
+	public GuestBookServiceImpl(GuestBookDao dao) {
+		guestBookDao = dao;
+	}
+	
 	public void setGuestBookDao(GuestBookDao guestBookDao) {
 		this.guestBookDao = guestBookDao;
 	}

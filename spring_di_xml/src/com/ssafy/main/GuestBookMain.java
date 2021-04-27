@@ -16,7 +16,8 @@ public class GuestBookMain {
 
 	public static void main(String[] args) throws IOException {
 		
-		ApplicationContext context = new ClassPathXmlApplicationContext("com/ssafy/configuration/applicationContext.xml");
+		// Spring Container
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/ssafy/configuration/applicationContext3.xml");
 		
 		GuestBookService guestBookService = context.getBean("gservice", GuestBookServiceImpl.class);
 		

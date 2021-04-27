@@ -11,6 +11,10 @@
 		
 	</bean>
 	
+	<bean id="sf" class="java.lang.String">
+		<constructor-arg value="ssafy"></constructor-arg>
+	</bean>
+	
 	
 	<bean id="gdao" class="com.ssafy.model.dao.GuestBookDaoImpl">
 		<property name="dataSource" ref="ds"></property>

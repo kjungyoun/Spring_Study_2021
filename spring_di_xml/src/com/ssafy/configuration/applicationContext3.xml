@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-autowire="byType"
+	>
+	
+	<bean id="ds" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/ssafyweb?serverTimezone=UTC&amp;useUniCode=yes&amp;characterEncoding=UTF-8"></property>
+		<property name="username" value="ssafy"></property>
+		<property name="password" value="ssafy"></property>
+		
+	</bean>
+	
+	<bean id="sf" class="java.lang.String">
+		<constructor-arg value="ssafy"></constructor-arg>
+	</bean>
+	
+	
+	<bean id="gdao" class="com.ssafy.model.dao.GuestBookDaoImpl"/>
+	<bean id="ldao" class="com.ssafy.model.dao.LoginDaoImpl"/>
+	<bean id="gservice" class="com.ssafy.model.service.GuestBookServiceImpl"/>
+	<bean id="Lservice" class="com.ssafy.model.service.LoginServiceImpl"/>
+</beans>

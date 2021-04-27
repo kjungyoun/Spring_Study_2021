@@ -13,7 +13,9 @@ import com.ssafy.util.DBUtil;
 public class LoginDaoImpl implements LoginDao {
 
 	private DataSource dataSource;
-
+	
+	public LoginDaoImpl() {};
+	
 	public LoginDaoImpl(DataSource dataSource) {
 		this.dataSource = dataSource;
 	}

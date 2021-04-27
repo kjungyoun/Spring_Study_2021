@@ -7,6 +7,8 @@ public class LoginServiceImpl implements LoginService {
 
 	private LoginDao loginDao;
 	
+	public LoginServiceImpl() {}
+	
 	public LoginServiceImpl(LoginDao loginDao) {
 		this.loginDao = loginDao;
 	}

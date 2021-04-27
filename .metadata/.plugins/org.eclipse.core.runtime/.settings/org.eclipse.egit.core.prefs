@@ -1,5 +1,5 @@
-GitRepositoriesView.GitDirectories=/Users/youn/SSAFY/Git/05_seoul08_homework/.git\:/Users/youn/SSAFY/Git/05_seoul08_share/.git\:/Users/youn/SSAFY/work_spring/.git\:
-GitRepositoriesView.GitDirectories.relative=/Users/youn/SSAFY/Git/05_seoul08_homework/.git\:/Users/youn/SSAFY/Git/05_seoul08_share/.git\:.git\:
+GitRepositoriesView.GitDirectories=/Users/youn/SSAFY/Git/05_seoul08_homework/.git\:/Users/youn/SSAFY/Git/happyhouse_db/.git\:/Users/youn/SSAFY/Git/05_seoul08_share/.git\:/Users/youn/SSAFY/Git/happyhouse_front/.git\:/Users/youn/SSAFY/Git/happyhouse_back/.git\:/Users/youn/SSAFY/work_spring/.git\:/Users/youn/SSAFY/Git/happyhouse_algo/.git\:
+GitRepositoriesView.GitDirectories.relative=/Users/youn/SSAFY/Git/05_seoul08_homework/.git\:/Users/youn/SSAFY/Git/happyhouse_db/.git\:/Users/youn/SSAFY/Git/05_seoul08_share/.git\:/Users/youn/SSAFY/Git/happyhouse_front/.git\:/Users/youn/SSAFY/Git/happyhouse_back/.git\:.git\:/Users/youn/SSAFY/Git/happyhouse_algo/.git\:
 RepositorySearchDialogSearchPath=/Users/youn/SSAFY/Git
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
