@@ -86,12 +86,4 @@ public class MemberDaoImpl implements MemberDao {
 		return memberDto;
 	}
 	
-	public static void main(String[] args) {
-		MemberDao dao = new MemberDaoImpl();
-		try {
-			System.out.println(dao.login("ssafy","ssafy"));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 }

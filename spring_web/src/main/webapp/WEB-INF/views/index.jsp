@@ -10,6 +10,7 @@
 </head>
 <body>
 <a href="${root}/hello">1. hello</a></br>
-<a href="${root }/form">파라미터 전달</a></br>
+<a href="${root }/form">2. 파라미터 전달</a></br>
+<a href="${root }/redirect">3. redirect</a></br>
 </body>
 </html>
