@@ -3,7 +3,6 @@
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
 <fullyQualifiedTypeName name="com.ssafy.model.service.ProductServiceImpl"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 <fullyQualifiedTypeName name="org.springframework.web.filter.CharacterEncodingFilter"/>
 <fullyQualifiedTypeName name="java.lang.AutoCloseable"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
@@ -12,8 +11,6 @@
 <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Aspect"/>
 <fullyQualifiedTypeName name="org.aspectj.lang.annotation.Before"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 <fullyQualifiedTypeName name="org.springframework.web.servlet.handler.HandlerInterceptorAdapter"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
@@ -23,11 +20,18 @@
 <fullyQualifiedTypeName name="org.slf4j.Logger"/>
 <fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlRootElement"/>
 <fullyQualifiedTypeName name="javax.sql.DataSource"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 <fullyQualifiedTypeName name="com.ssafy.product.util.DBUtil"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
+<fullyQualifiedTypeName name="com.ssafy.product.model.dto.PageBean"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.type.MappedJdbcTypes"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.annotations.Mapper"/>
+<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 </qualifiedTypeNameHistroy>

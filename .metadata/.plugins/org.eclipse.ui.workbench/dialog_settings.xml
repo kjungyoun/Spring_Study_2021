@@ -21,6 +21,8 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/Users/youn/Downloads/0429_배포/guestbook_framework_배포"/>
+			<item value="/Users/youn/Downloads/0429_배포/guestbook_mybatis_배포"/>
 			<item value="/Users/youn/Downloads/spring_web_book"/>
 			<item value="/Users/youn/Downloads/0427_배포/guestbook_spring"/>
 			<item value="/Users/youn/Downloads/0426_배포/spring_di_annotation/src"/>
@@ -53,6 +55,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/Users/youn/Downloads/hw0429.zip"/>
 			<item value="/Users/youn/Downloads/Untitled.zip"/>
 			<item value="/Users/youn/Downloads/0426.zip"/>
 		</list>

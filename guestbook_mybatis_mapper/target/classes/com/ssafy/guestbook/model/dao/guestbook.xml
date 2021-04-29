@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.guestbook.model.dao.GuestBookDao">
+
+	<insert id="writeArticle" parameterType="guestbook">
+		insert into guestbook (userid, subject, content, regtime)
+		values (#{userid}, #{subject}, #{content}, now())
+	</insert>
+	
+	<select id="listArticle" parameterType="map" resultType="guestbook">
+		select articleno, userid, subject, content, regtime
+		from guestbook
+		<where>
+			<if test="word != null and word != ''">
+				<choose>
+					<when test="key == 'subject'">
+						subject like concat('%', #{word}, '%')
+					</when>
+					<otherwise>
+						${key} = #{word}
+					</otherwise>
+				</choose>
+			</if>
+		</where>
+		order by articleno desc
+		limit #{start}, #{spp}
+	</select>
+	
+	<select id="getTotalCount" parameterType="map" resultType="int">
+		select count(articleno)
+		from guestbook
+		<where>
+			<if test="word != null and word != ''">
+				<choose>
+					<when test="key == 'subject'">
+						subject like concat('%', #{word}, '%')
+					</when>
+					<otherwise>
+						${key} = #{word}
+					</otherwise>
+				</choose>
+			</if>
+		</where>
+	</select>
+	
+	<select id="getArticle" parameterType="int" resultType="guestbook">
+		select articleno, userid, subject, content, regtime
+		from guestbook
+		where articleno = #{articleno}
+	</select>
+	
+	<update id="modifyArticle" parameterType="guestbook">
+		update guestbook
+		set subject = #{subject}, content = #{content}
+		where articleno = #{articleno}
+	</update>
+	
+	<delete id="deleteArticle" parameterType="int">
+	delete from guestbook
+	where articleno = #{articleno}
+	</delete>
+	
+</mapper>
