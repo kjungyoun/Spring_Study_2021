@@ -12,7 +12,7 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.jdt.ui.java"/>
 		</list>
@@ -21,6 +21,8 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/Users/youn/Downloads/guestbook_rest_배포"/>
+			<item value="/Users/youn/Downloads/spring_web_product_sol/spring_web_product"/>
 			<item value="/Users/youn/Downloads/0429_배포/guestbook_framework_배포"/>
 			<item value="/Users/youn/Downloads/0429_배포/guestbook_mybatis_배포"/>
 			<item value="/Users/youn/Downloads/spring_web_book"/>

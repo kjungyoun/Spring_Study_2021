@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+	
+<configuration>
+
+	<typeAliases>
+		<typeAlias type="com.ssafy.product.model.dto.Product" alias="product" />
+		<typeAlias type="com.ssafy.product.model.dto.MemberDto" alias="member" />
+		<typeAlias type="com.ssafy.product.model.dto.PageBean" alias="bean"/>
+	</typeAliases>
+	
+</configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

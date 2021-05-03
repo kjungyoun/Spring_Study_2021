@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.product.model.dao.ProductDao">
+	
+	<select id="getLastNo" resultType="int">
+		select last_insert_id() as id from dual
+	</select>
+	
+	<select id="getProduct" parameterType="int" resultType="product">
+		select * from product
+		where productno = #{data}
+	</select>
+	
+	<insert id="insertProduct" parameterType="product">
+		insert into product(name, price, info) values(#{name}, #{price}, #{info})
+	</insert>
+	
+	<select id="searchAll" parameterType="bean" resultType="product">
+		select * from product
+		<where>
+			<if test="word != null and key != null and word != '' and key != 'all'">
+				<choose>
+					<when test="key == 'name'">
+						name like concat('%',#{word},'%')
+					</when>
+					<otherwise>
+						price >= #{word}
+					</otherwise>
+				</choose>
+			</if>
+		</where>
+		order by productno desc limit #{startNo}, #{interval}
+	</select>
+	
+	<select id="totalCount" parameterType="bean" resultType="int">
+		select count(*) from product
+		<where>
+			<if test="word != null and key != null and word != '' and key != 'all'">
+				<choose>
+					<when test="key == 'name'">
+						name like concat('%',#{word},'%')
+					</when>
+					<otherwise>
+						price >= #{word}
+					</otherwise>
+				</choose>
+			</if>
+		</where>
+	</select>
+	
+</mapper>
