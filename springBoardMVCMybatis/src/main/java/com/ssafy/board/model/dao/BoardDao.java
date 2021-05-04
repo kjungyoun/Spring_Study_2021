@@ -20,3 +20,7 @@ public interface BoardDao {
 	void remove(String no);
 	void removeFile(int bno);
 }
+
+
+
+

@@ -112,7 +112,7 @@
 					</table>
 				</form>
 			</div>
-			<div id="pagination-container">${bean.pagelink}</div>
+			<div id="pagination-container">${bean.pageLink}</div>
 		</article>
 	</article>
 	<jsp:include page="/WEB-INF/views/copyright.jsp" />

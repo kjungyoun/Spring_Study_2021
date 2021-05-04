@@ -3,37 +3,33 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.ssafy.board.model.dao.MemberDao">
-
-	<insert id="insert" parameterType="member">
-		insert into member(id, password, name, email, address, phone)
-		values(#{id}, #{password}, #{name}, #{email}, #{address}, #{phone})
+	<insert id="insert"		parameterType="member">
+		insert into member ( id, password, name, email, address, phone)
+		values( #{id}, #{password}, #{name}, #{email}, #{address}, #{phone})
 	</insert>
 	
-	<update id="update" parameterType="member">
-		update member set password = #{password},
-						  name = #{name},
-						  email = #{email},
-						  address = #{address},
-						  phone = #{phone}
-		where id = #{id}
-	</update>
+	<update id="update"		parameterType="member">
+		update  member set  password=#{password}, 
+							name=#{name}, 
+							email=#{email}, 
+							address=#{address}, 
+							phone=#{phone}
+		where id=#{id}
+	</update >
+	<delete id="remove"		parameterType="string">
+		delete from member	where id=#{id}
+	</delete >
+	<select id="search"		parameterType="string"		resultType="member">
+		select * from member  where id=#{id}
+	</select >
 	
-	<delete id="remove" parameterType="string">
-		delete from member
-		where id = #{id}
-	</delete>
-	
-	<select id="search" parameterType="string" resultType="member">
-		select * from member where id = #{id}
-	</select>
-	
-	<select id="searchAll" parameterType="pagebean" resultType="member">
+	<select id="searchAll"	parameterType="pagebean"	resultType="member">
 		select * from member
 		<where>
-			<if test="key != 'all' and word != null and word != ''">
+			<if test="key != 'all' and word!=null and word!='' ">
 				<choose>
-					<when test="key == 'id'">
-						id = #{word}
+					<when test="key=='id'">
+						id=#{word}
 					</when>
 					<otherwise>
 						${key} like concat('%',#{word},'%')
@@ -42,16 +38,15 @@
 			</if>
 		</where>
 		order by id desc
-		limit #{startNo}, #{interval}
-	</select>
-	
-	<select id="getCount" parameterType="pagebean" resultType="int">
+		limit	#{startNo}, #{interval}
+	</select >
+	<select id="getCount"	parameterType="pagebean"	resultType="int">
 		select count(*) from member
 		<where>
-			<if test="key != 'all' and word != null and word != ''">
+			<if test="key != 'all' and word!=null and word!='' ">
 				<choose>
-					<when test="key == 'id'">
-						id = #{word}
+					<when test="key=='id'">
+						id=#{word}
 					</when>
 					<otherwise>
 						${key} like concat('%',#{word},'%')
@@ -59,8 +54,27 @@
 				</choose>
 			</if>
 		</where>
-	</select>
-	
-	
-	
+	</select >
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

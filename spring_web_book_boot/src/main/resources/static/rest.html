@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#btn').click(function(){
+			$.ajax({
+				url:'book',
+				type:'GET',
+				dataType:'json',
+				success:processList,
+				error:function(err){
+					console.log(err)
+				}
+			});
+		})
+	})
+	
+	function  processList(data, status, xhr){
+		var container = $('.container');
+		var content=$(`<table	align="center" border="1">
+			<caption> 책 목록 </caption>
+			<thead>
+				<tr><td colspan="4" align="right"><a href="insertBookForm.do">책 등록 하기</a></td></tr>	
+				<tr><td width="150">isbn</td>
+					<td width="150">제목</td>
+					<td width="100">저자</td>
+					<td width="100">출판사</td>
+				</tr>
+			</thead></table>`);
+		$.each(data, function(index, book){
+			console.log(book)
+			$(`<tr>
+				<td width="150">${book.isbn}</td>
+				<td width="150"><a href="searchBook.do?isbn=${book.isbn}">${book.title}</a></td>
+				<td width="100">${book.author}</td>
+				<td width="100">${book.publisher}</td>
+				</tr>`).appendTo(content);
+		})
+		console.log(content.html())
+		container.append(content);
+	}
+</script>
+</head>
+<body>
+<button id="btn">책 목록</button>
+<div class="container">
+	
+</div>
+
+</body>
+</html>

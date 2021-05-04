@@ -3,14 +3,12 @@
 	"http://mybatis.org/dtd/mybatis-3-config.dtd">
 	
 <configuration>
-
 	<typeAliases>
-		<typeAlias type="com.ssafy.board.model.dto.Board" alias="board" />
-		<typeAlias type="com.ssafy.board.model.dto.BoardFile" alias="boardfile" />
-		<typeAlias type="com.ssafy.board.model.dto.Member" alias="member" />
-		<typeAlias type="com.ssafy.board.model.dto.PageBean" alias="pagebean"/>
+		<typeAlias type="com.ssafy.board.model.dto.Member" 		alias="member" />
+		<typeAlias type="com.ssafy.board.model.dto.Board" 		alias="board" />
+		<typeAlias type="com.ssafy.board.model.dto.BoardFile" 	alias="boardfile" />
+		<typeAlias type="com.ssafy.board.model.dto.PageBean" 	alias="pagebean" />
 	</typeAliases>
-	
 </configuration>
 
 

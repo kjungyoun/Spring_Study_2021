@@ -3,40 +3,85 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.ssafy.board.model.dao.BoardDao">
-
-	<insert id="insert" parameterType="board">
-		insert into board(no, id, title, regdate, contents)
-		values(#{no}, 
-			   #{id}, 
-			   #{title}, 
-			   now(),  
-			   #{contents})
+	<select id="getBoardNo"	resultType="int">
+		select max(no)+1 from board
+	</select>
+	<insert id="insert"		parameterType="board">
+		insert into board(	no,
+							id,
+							title,
+							regdate,
+							contents)
+		values(
+			#{no},
+			#{id},
+			#{title},
+			now(),
+			#{contents}
+		)							
 	</insert>
 	
-	<update id="update" parameterType="board">
-		update board set id = #{id},
-						  title = #{title},
-						  regdate = now(),
-						  contents = #{contents}
-		where no = #{no}
-	</update>
+	<update id="update"		parameterType="board">
+		update  board set   id=#{id},
+							title=#{title},
+							regdate=now(),
+							contents=#{contents}
+		where no=#{no}
+	</update >
+	<delete id="remove"		parameterType="string">
+		delete from board	where no=#{no}
+	</delete >
 	
-	<delete id="remove" parameterType="string">
-		delete from board
-		where no = #{no}
-	</delete>
+	<!-- join 하기 전 -->
+	<!-- <select id="search"		parameterType="string"		resultType="board">
+		select * from board  where no=#{no}
+	</select > -->
 	
-	<select id="search" parameterType="string" resultType="board">
-		select * from board where no = #{no}
+	<!-- join 적용 -->
+	<!-- result map 설정 -->
+	<resultMap type="boardfile" id="fileMap">
+		<!-- primary key에 대한 컬럼을 설정할 때는 id 태그로 설정한다. -->
+		<id			property="no"		column="fileno"/>
+		<!-- 일반 컬럼은 result 태그로 설정한다. -->
+		<result property="sfilename" column="sfilename"/>
+		<result property="rfilename" column="rfilename"/>
+	</resultMap>
+	
+	<resultMap type="board" id="boardMap">
+		<id property="no" 		column="no"/>
+		<result		property="id"		column="id"/>
+		<result		property="title"		column="title"/>
+		<result		property="contents"		column="contents"/>
+		<result		property="regdate"		column="regdate"/>
+		
+		<!-- join data 매핑
+			1:1	 	association 태그로 설정
+			1:N 	collection 태그로 설정
+			<collection property="N으로 매핑될 속성명" ofType="N으로 매핑될 데이터의 타입" resultMap="N으로 매핑될 데이터의 resultMap id"></collection>
+		 -->
+		 <collection property="files" ofType="boardfile" resultMap="fileMap"></collection>
+		
+	</resultMap>
+	
+	<select id="search" parameterType="string" resultType="boardMap">
+        select a.*, rfilename, sfilename, f.no as fileno
+		from boardfile f
+        right join (select no, id, title, contents
+				, date_format(regdate, '%y-%m-%d') as regdate
+			from board
+			where no =#{no}) a
+		on a.no = bno
+            
 	</select>
 	
-	<select id="searchAll" parameterType="pagebean" resultType="board">
+	
+	<select id="searchAll"	parameterType="pagebean"	resultType="board">
 		select * from board
 		<where>
-			<if test="key != 'all' and word != null and word != ''">
+			<if test="key != 'all' and word!=null and word!='' ">
 				<choose>
-					<when test="key == 'id'">
-						id = #{word}
+					<when test="key=='id'">
+						id=#{word}
 					</when>
 					<otherwise>
 						${key} like concat('%',#{word},'%')
@@ -45,16 +90,15 @@
 			</if>
 		</where>
 		order by no desc
-		limit #{startNo}, #{interval}
-	</select>
-	
-	<select id="getCount" parameterType="pagebean" resultType="int">
+		limit	#{startNo}, #{interval}
+	</select >
+	<select id="getCount"	parameterType="pagebean"	resultType="int">
 		select count(*) from board
 		<where>
-			<if test="key != 'all' and word != null and word != ''">
+			<if test="key != 'all' and word!=null and word!='' ">
 				<choose>
-					<when test="key == 'id'">
-						id = #{word}
+					<when test="key=='id'">
+						id=#{word}
 					</when>
 					<otherwise>
 						${key} like concat('%',#{word},'%')
@@ -62,8 +106,27 @@
 				</choose>
 			</if>
 		</where>
-	</select>
-	
-	
-	
+	</select >
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

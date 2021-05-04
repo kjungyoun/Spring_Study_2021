@@ -13,12 +13,14 @@ public class Board implements Serializable {
 	private String regdate;
 	private String contents;
 	
-	/** 파일 저장할 경로 */
+	/**파일 저장할 경로*/
 	private String dir;
-	/** 업로드한 파일 정보 */
+	/**upload된 파일 정보 */
 	private MultipartFile[] fileup;
-	/** DB에 저장된 파일 정보 */
+	/**DB에 저장된 파일 정보*/
 	private List<BoardFile> files;
+	
+	public Board() {}
 
 	@Override
 	public String toString() {
@@ -89,6 +91,9 @@ public class Board implements Serializable {
 	public void setFiles(List<BoardFile> files) {
 		this.files = files;
 	}
-
-	
 }
+
+
+
+
+

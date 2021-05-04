@@ -21,7 +21,7 @@
 <c:url value="/" var="ctx"></c:url>
 <div id="head">
 	<div id="logo">
-		<img src="${ctx}images/logo.png" />
+		<img src="images/ssafy.png" />
 	</div>
 	<div id="title">
 		<h1>Board Manager</h1>

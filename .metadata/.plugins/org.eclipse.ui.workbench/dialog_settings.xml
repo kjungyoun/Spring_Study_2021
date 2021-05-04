@@ -12,15 +12,17 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jst.jsp.ui.internal.wizard.NewJSPWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.wst.web.ui"/>
 		</list>
 	</section>
 	<section name="FileSystemImportWizard">
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="/Users/youn/Downloads/springBoardMVCMybatis"/>
+			<item value="/Users/youn/SSAFY/work_spring/guestbook_rest/src/main/java"/>
 			<item value="/Users/youn/Downloads/guestbook_rest_배포"/>
 			<item value="/Users/youn/Downloads/spring_web_product_sol/spring_web_product"/>
 			<item value="/Users/youn/Downloads/0429_배포/guestbook_framework_배포"/>
@@ -57,6 +59,9 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/Users/youn/Downloads/hw0504.zip"/>
+			<item value="/Users/youn/Downloads/guestbook_rest.zip"/>
+			<item value="/Users/youn/Downloads/hw0503.zip"/>
 			<item value="/Users/youn/Downloads/hw0429.zip"/>
 			<item value="/Users/youn/Downloads/Untitled.zip"/>
 			<item value="/Users/youn/Downloads/0426.zip"/>

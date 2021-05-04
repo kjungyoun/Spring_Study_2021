@@ -82,7 +82,7 @@ public class PageBean {
 	}
 	@Override
 	public String toString() {
-		return "PageBean [key=" + key + ", word=" + word + ", pageNo=" + pageNo + ", interval=" + interval + "]";
+		return "PageBean [key=" + key + ", word=" + word + ", pageNo=" + pageNo + ", interval=" + interval+ ", startNo=" + startNo + "]";
 	}
 	public void setPageLink(String pageLink) {
 		this.pageLink = pageLink;

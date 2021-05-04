@@ -21,7 +21,6 @@ public class PageUtility {
     int pagePercount = 5;				//페이지 링크 거는 개수      << < 1 2 3 4 5 > >>
     String imagepath;
     String search;
-    
     /**
      * 현재페이지와 경로 한번에 보여줄 열의 갯수를 세팅하는 생성자
      * @param displayrowcount 한 페이지에 보여줄 게시글 수
