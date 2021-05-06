@@ -1,4 +1,4 @@
-package com.ssafy.guestbook;
+package com.ssafy.happyhouse;
 
 import java.text.DateFormat;
 import java.util.Date;

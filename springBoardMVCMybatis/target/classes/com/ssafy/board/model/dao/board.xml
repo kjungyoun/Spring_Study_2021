@@ -63,7 +63,7 @@
 		
 	</resultMap>
 	
-	<select id="search" parameterType="string" resultType="boardMap">
+	<select id="search" parameterType="string" resultMap="boardMap">
         select a.*, rfilename, sfilename, f.no as fileno
 		from boardfile f
         right join (select no, id, title, contents

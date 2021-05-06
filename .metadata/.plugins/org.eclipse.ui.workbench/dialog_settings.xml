@@ -59,6 +59,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="/Users/youn/Downloads/guestbook_final.zip"/>
 			<item value="/Users/youn/Downloads/hw0504.zip"/>
 			<item value="/Users/youn/Downloads/guestbook_rest.zip"/>
 			<item value="/Users/youn/Downloads/hw0503.zip"/>

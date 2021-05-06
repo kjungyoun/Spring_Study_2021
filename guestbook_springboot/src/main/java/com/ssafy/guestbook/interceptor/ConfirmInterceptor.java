@@ -3,6 +3,7 @@ package com.ssafy.guestbook.interceptor;
 import javax.servlet.http.*;
 
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import com.ssafy.guestbook.model.MemberDto;
